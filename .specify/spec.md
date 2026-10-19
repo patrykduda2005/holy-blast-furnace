@@ -11,48 +11,48 @@
 
 **US1: Budowa wieżyczki obronnej**
 * **Jako** gracz
-* **Chcę** zbudować wieżyczkę (np. "Odciąg pyłów") na wybranym polu
+* **Chcę** zbudować wieżyczkę (np. "Elektryczny Piec Łukowy") na wybranym polu
 * **Po to, aby** bronić bazy przed zanieczyszczeniami.
 * **Kryteria Akceptacji (Given-When-Then):**
-  * **Given** (Zakładając, że) gracz posiada wymagane 50 jednostek surowca i wybrał puste, dozwolone pole na mapie.
-  * **When** (Kiedy) gracz zatwierdza budowę wieżyczki.
-  * **Then** (Wtedy) wieżyczka pojawia się na polu, a z konta gracza ubywa 50 jednostek surowca.
+  * **Zakładając, że** gracz posiada wymagane 50 jednostek surowca i wybrał puste, dozwolone pole na mapie.
+  * **Kiedy** gracz zatwierdza budowę wieżyczki.
+  * **Wtedy** wieżyczka pojawia się na polu, a z konta gracza ubywa 50 jednostek surowca.
 
 **US2: Stworzenie nowej mapy w edytorze**
 * **Jako** gracz-twórca
 * **Chcę** postawić przeszkodę (np. element instalacji pieca) na planszy
 * **Po to, aby** zaprojektować unikalny układ poziomu.
 * **Kryteria Akceptacji (Given-When-Then):**
-  * **Given** (Zakładając, że) gracz otworzył puste okno edytora map.
-  * **When** (Kiedy) gracz przeciąga element z paska narzędzi na puste pole na siatce.
-  * **Then** (Wtedy) element zostaje umieszczony i zablokowany w wybranym miejscu na siatce.
+  * **Zakładając, że** gracz otworzył puste okno edytora map.
+  * **Kiedy** gracz przeciąga element z paska narzędzi na puste pole na siatce.
+  * **Wtedy** element zostaje umieszczony i zablokowany w wybranym miejscu na siatce.
 
 **US3: Uruchomienie fali przeciwników**
 * **Jako** gracz
 * **Chcę** nacisnąć przycisk uruchomienia fali
 * **Po to, aby** rozpocząć fazę obrony.
 * **Kryteria Akceptacji (Given-When-Then):**
-  * **Given** (Zakładając, że) mapa jest wczytana, a na ekranie widnieje przycisk "Start Fali".
-  * **When** (Kiedy) gracz klika przycisk "Start Fali".
-  * **Then** (Wtedy) rozpoczyna się odliczanie (np. 3 sekundy), po czym wrogowie zaczynają wchodzić na mapę z punktu startowego.
+  * **Zakładając, że** mapa jest wczytana, a na ekranie widnieje przycisk "Start Fali".
+  * **Kiedy** gracz klika przycisk "Start Fali".
+  * **Wtedy** rozpoczyna się odliczanie (np. 3 sekundy), po czym wrogowie zaczynają wchodzić na mapę z punktu startowego.
 
 **US4: Zapisanie projektu mapy**
 * **Jako** gracz-twórca
 * **Chcę** zapisać stworzony układ planszy
 * **Po to, aby** móc do niego wrócić lub go przetestować.
 * **Kryteria Akceptacji (Given-When-Then):**
-  * **Given** (Zakładając, że) na mapie znajduje się co najmniej punkt startowy wrogów i baza (wielki piec).
-  * **When** (Kiedy) gracz klika przycisk "Zapisz mapę".
-  * **Then** (Wtedy) dane mapy zapisują się w lokalnej bazie SQLite, a system wyświetla komunikat o sukcesie.
+  * **Zakładając, że** na mapie znajduje się co najmniej punkt startowy wrogów i baza (wielki piec).
+  * **Kiedy** gracz klika przycisk "Zapisz mapę".
+  * **Wtedy** dane mapy zapisują się w lokalnej bazie SQLite, a system wyświetla komunikat o sukcesie.
 
 **US5: Ekran końca gry (Porażka)**
 * **Jako** gracz
 * **Chcę** zobaczyć ekran podsumowania po przegranej
 * **Po to, aby** wiedzieć, jak długo przetrwałem.
 * **Kryteria Akceptacji (Given-When-Then):**
-  * **Given** (Zakładając, że) punkty wytrzymałości bazy (Wielkiego Pieca) spadają do zera.
-  * **When** (Kiedy) system odnotowuje zniszczenie bazy.
-  * **Then** (Wtedy) rozgrywka zostaje zatrzymana, a na ekranie wyświetla się podsumowanie z liczbą pokonanych wrogów.
+  * **Zakładając, że** punkty wytrzymałości bazy (Wielkiego Pieca) spadają do zera.
+  * **Kiedy** system odnotowuje zniszczenie bazy.
+  * **Wtedy** rozgrywka zostaje zatrzymana, a na ekranie wyświetla się podsumowanie z liczbą pokonanych wrogów.
 
 *(Miejsce na link do Diagramów Przypadków Użycia UML w formacie obrazka)*
 
