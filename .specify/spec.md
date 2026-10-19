@@ -5,7 +5,7 @@
 * **Silnik:** Godot Engine 4.7.2
 * **Baza danych:** SQLite
 * **Motyw:** Wytwarzanie stopów metali żelaznych
-* **Podejście do prototypu:** Prototyp do porzucenia (Throwaway Prototyping) - tworzymy proste makiety pokazujące interfejs i ekrany gry, bez implementowania zaawansowanej logiki w silniku.
+* **Prototypu:** Prototyp z porzucenia (Throwaway Prototype) - tworzymy proste makiety pokazujące interfejs i ekrany gry, bez implementowania zaawansowanej logiki w silniku.
 
 ## 2. Historie Użytkownika (User Stories - standard INVEST)
 
