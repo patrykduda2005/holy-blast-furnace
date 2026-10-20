@@ -63,7 +63,7 @@ Funkcjonalności systemu:
 * **REQ-F1: Pętla Rozgrywki**
   * *Opis:* Fale przeciwników i obrona pieca.
 * **REQ-F2: Edytor Map**
-  * *Opis:* Tworzenie i zapis map do bazy danych SQLite[cite: 16].
+  * *Opis:* Tworzenie i zapis map do bazy danych SQLite.
 
 ### REQ-NF: Wymagania Niefunkcjonalne (NFR)
 Klasyfikacja ISO/IEC 25002 (SQuaRE):
