@@ -85,4 +85,4 @@ Klasyfikacja ISO/IEC 25002 (SQuaRE):
 ## Zarządzanie konstytucją
 Niniejsza konstytucja gromadzi założenia projektu, historie użytkownika, kryteria akceptacji, wymagania systemowe i metryki opisane dla Holy Blast Furnaces!. Zmiany tych ustaleń powinny zachować spójność między zakresem prototypu, historiami użytkownika i wymaganiami. Prototyp pozostaje prototypem z porzuceniem; opisane funkcje i wymagania określają docelowe zachowanie oraz makiety, a nie nakaz implementacji zaawansowanej logiki w silniku.
 
-**Wersja**: 1.0.0 | **Data ratyfikacji**: 2026-10-19 | **Ostatnia zmiana**: 2026-10-19
+**Wersja**: 1.0.0 | **Data utworzenia**: 2026-10-19 | **Ostatnia zmiana**: 2026-10-19
