@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bsdf8b7wvsnap"]
+
+[ext_resource type="Texture2D" uid="uid://km6t2guc3h3l" path="res://textures/Basic_map_1.jpg" id="1_wtcfe"]
+
+[sub_resource type="TileSet" id="TileSet_khtlt"]
+tile_size = Vector2i(64, 64)
+
+[node name="Node2D" type="Node2D" unique_id=44353146]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1574653673]
+tile_set = SubResource("TileSet_khtlt")
+
+[node name="Camera2D" type="Camera2D" parent="TileMapLayer" unique_id=1311762916]
+
+[node name="BasicMap1" type="Sprite2D" parent="." unique_id=483659432]
+position = Vector2(0, -1)
+scale = Vector2(0.4193314, 0.42220056)
+texture = ExtResource("1_wtcfe")
