@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dc0cwe10vnq4s"]
+
+[ext_resource type="Texture2D" uid="uid://ccwtlcqf5sh5b" path="res://textures/Mad_square.jpg" id="1_221se"]
+[ext_resource type="Script" uid="uid://eokyshg0q405" path="res://Enemies/basic_enemy.gd" id="1_dvx36"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_khtlt"]
+size = Vector2(64, 64)
+
+[node name="Basic_enemy" type="PathFollow2D" unique_id=1559184484]
+script = ExtResource("1_dvx36")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=418926063]
+
+[node name="Tower" type="Sprite2D" parent="CharacterBody2D" unique_id=2038516357]
+position = Vector2(-2.6528796e-06, 3.5762787e-07)
+rotation = 1.5707964
+scale = Vector2(0.25396824, 0.25396827)
+texture = ExtResource("1_221se")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=450036187]
+shape = SubResource("RectangleShape2D_khtlt")
