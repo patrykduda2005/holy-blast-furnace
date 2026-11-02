@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://g2p0xc4kc27d"]
+
+[ext_resource type="Texture2D" uid="uid://ccot3h6nlbixm" path="res://textures/Nabuj.png" id="1_fyrkc"]
+
+[node name="Bullet" type="Node2D" unique_id=670750505]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=148970048]
+texture = ExtResource("1_fyrkc")
