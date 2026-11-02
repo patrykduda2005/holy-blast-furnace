@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b4glmwvpctlsw"]
+
+[ext_resource type="Script" uid="uid://4at7cra8vwg8" path="res://utils/enemy_factory.gd" id="1_2kabj"]
+[ext_resource type="PackedScene" uid="uid://dc0cwe10vnq4s" path="res://Enemies/basic_enemy.tscn" id="2_uo7jn"]
+
+[node name="EnemyFactory" type="Node2D" unique_id=618849710]
+script = ExtResource("1_2kabj")
+basicEnemy = ExtResource("2_uo7jn")
