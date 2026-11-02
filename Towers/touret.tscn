@@ -1,7 +1,10 @@
-[gd_scene format=3 uid="uid://dytes7dfqjfhg"]
+[gd_scene format=3 uid="uid://daqvstv3p55vf"]
 
 [ext_resource type="Texture2D" uid="uid://b7jk8vy7k3ocp" path="res://textures/Działko.png" id="1_qrb8a"]
 [ext_resource type="Script" uid="uid://cyrn0aqkct6am" path="res://Towers/basic/turret.gd" id="1_yw3bp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xrxaf"]
+radius = 175.0
 
 [node name="Turret" type="Node2D" unique_id=1270449557]
 script = ExtResource("1_yw3bp")
@@ -11,3 +14,8 @@ texture = ExtResource("1_qrb8a")
 
 [node name="Lufa" type="Marker2D" parent="Sprite2D" unique_id=1227459375]
 position = Vector2(33, 0)
+
+[node name="Range" type="Area2D" parent="." unique_id=2130776713]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Range" unique_id=1235973984]
+shape = SubResource("CircleShape2D_xrxaf")

@@ -13,6 +13,7 @@ script = ExtResource("1_dvx36")
 
 [node name="Tower" type="Sprite2D" parent="CharacterBody2D" unique_id=2038516357]
 position = Vector2(-2.6528796e-06, 3.5762787e-07)
+rotation = 1.5707964
 scale = Vector2(0.25396824, 0.25396827)
 texture = ExtResource("1_221se")
 

@@ -1,6 +1,6 @@
 extends PathFollow2D
 
-@export var run_speed: int = 50
+@export var run_speed: int = 125
 
 func _ready() -> void:
 	# Wyłącza zapętlanie ścieżki, aby wróg nie wracał na start po dotarciu do pieca
