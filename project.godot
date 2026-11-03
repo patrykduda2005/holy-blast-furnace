@@ -24,6 +24,7 @@ TowerFactory="*uid://cdjbkjf1dsu84"
 
 [display]
 
+window/size/viewport_height=640
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
