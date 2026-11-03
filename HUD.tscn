@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://oq1appavfyfj"]
+
+[ext_resource type="Script" uid="uid://cvi0fwqwwj44l" path="res://HUD.gd" id="1_efote"]
+[ext_resource type="PackedScene" uid="uid://b18oghbl5rf2k" path="res://EndScreen.tscn" id="2_vow1y"]
+
+[node name="Hud" type="Control" unique_id=1263505550]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_efote")
+
+[node name="ResourcesLabel" type="Label" parent="." unique_id=594601524]
+layout_mode = 1
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="HPBar" type="ProgressBar" parent="." unique_id=338876993]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -27.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="StartWaveButton" type="Button" parent="." unique_id=126626706]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -8.0
+offset_bottom = 8.0
+grow_horizontal = 0
+
+[node name="EndScreen" parent="." unique_id=1940783431 instance=ExtResource("2_vow1y")]
+layout_mode = 1
