@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://b18oghbl5rf2k"]
+
+[ext_resource type="Script" uid="uid://gvc1hfsd0lm8" path="res://EndScreen.gd" id="1_ekb8w"]
+
+[node name="EndScreen" type="Control" unique_id=1940783431]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ekb8w")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=2027484504]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=210942908]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1416131820]
+layout_mode = 2
+text = "PORAŻKA"
+
+[node name="RestartButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=933718752]
+layout_mode = 2
+text = "Spróbuj ponownie"
