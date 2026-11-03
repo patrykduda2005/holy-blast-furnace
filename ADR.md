@@ -2,7 +2,7 @@
 
 ## ADR-001: Wybór silnika Godot Engine 4 i języka GDScript
 
-* **Data:** 2026-11-02
+* **Data:** 13-10-2026
 * **Status:** Zaakceptowano
 
 ### Kontekst
@@ -21,7 +21,7 @@ Wybieramy silnik Godot Engine 4 wraz z natywnym językiem skryptowym GDScript ja
 
 ## ADR-02: Wykorzystanie lokalnej bazy danych SQLite do przechowywania map i statystyk
 
-* **Data:** 2026-11-02
+* **Data:** 13-10-2026
 * **Status:** Zaakceptowano
 
 ### Kontekst
@@ -41,7 +41,7 @@ Do trwałego przechowywania danych (persystencji) wybieramy lokalną, relacyjną
 
 ## ADR-03: Architektura sieciowa Host-Client (Listen Server) dla trybu kooperacji
 
-* **Data:** 2026-11-02
+* **Data:** 13-10-2026
 * **Status:** Zaakceptowano
 
 ### Kontekst
