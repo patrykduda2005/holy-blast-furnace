@@ -19,27 +19,7 @@ Wybieramy silnik Godot Engine 4 wraz z natywnym językiem skryptowym GDScript ja
 * **Negatywne:** Niższa wydajność surowych obliczeń w języku interpretowanym GDScript w porównaniu do kompilowanego języka Odin, co wymaga unikania ciężkich pętli w metodzie `_process()`.
 
 
-## ADR-002: Architektura komponentowo-zdarzeniowa oparta na drzewie scen i sygnałach
-
-* **Data:** 2026-11-02
-* **Status:** Zaakceptowano
-
-### Kontekst
-Trzyosobowy zespół pracuje równolegle nad oddzielnymi podsystemami: rdzeniem rozgrywki (wieże, fale przeciwników), interfejsem użytkownika wraz z edytorem map oraz warstwą danych i sieci. Ścisłe powiązanie tych elementów utrudniłoby testowanie pojedynczych funkcjonalności i powodowałoby częste konflikty w kodzie.
-
-### Decyzja
-Stosujemy architekturę modularną opartą na kompozycji węzłów (Nodes) oraz wzorcu projektowym Obserwator (wbudowany w Godot mechanizm sygnałów – Signals). Globalny stan aplikacji, obsługa bazy danych oraz komunikacja sieciowa zostają wydzielone do niezależnych singletonów (Autoload: `GameManager`, `DatabaseManager`, `NetworkManager`).
-
-### Rozważane alternatywy
-* **Bezpośrednie referencje między obiektami sceny:** Odrzucono, ponieważ prowadzą do silnego sprzężenia (tight coupling) – zmiana w strukturze UI wymagałaby modyfikacji kodu logiki wieżyczek lub przeciwników.
-* **Czysta architektura ECS (Entity Component System):** Odrzucono ze względu na brak natywnego wsparcia w standardowym drzewie scen Godota i niepotrzebną komplikację przy obecnej skali projektu.
-
-### Konsekwencje
-* **Pozytywne:** Niskie sprzężenie modułów (logika gry emituje sygnał np. o zmianie zasobów lub końcu fali, a UI oraz moduł sieciowy jedynie na niego nasłuchują), możliwość niezależnego testowania scen w izolacji, czytelny podział na komponenty w modelu 4+1.
-* **Negatywne:** Trudniejsze śledzenie pełnego przepływu sterowania w przypadku głębokich łańcuchów sygnałów, co wymaga dokładnego udokumentowania kluczowych interakcji na diagramach sekwencji.
-
-
-## ADR-003: Wykorzystanie lokalnej bazy danych SQLite do przechowywania map i statystyk
+## ADR-02: Wykorzystanie lokalnej bazy danych SQLite do przechowywania map i statystyk
 
 * **Data:** 2026-11-02
 * **Status:** Zaakceptowano
@@ -59,7 +39,7 @@ Do trwałego przechowywania danych (persystencji) wybieramy lokalną, relacyjną
 * **Negatywne:** Konieczność dołączenia natywnej binarki rozszerzenia GDExtension dla docelowych systemów operacyjnych oraz ręcznego mapowania wyników zapytań SQL na obiekty w GDScript.
 
 
-## ADR-004: Architektura sieciowa Host-Client (Listen Server) dla trybu kooperacji
+## ADR-03: Architektura sieciowa Host-Client (Listen Server) dla trybu kooperacji
 
 * **Data:** 2026-11-02
 * **Status:** Zaakceptowano
