@@ -2,20 +2,25 @@
 
 [ext_resource type="Script" uid="uid://bdqmhm852qcnw" path="res://Menu/settings.gd" id="1_e56cd"]
 [ext_resource type="Texture2D" uid="uid://km6t2guc3h3l" path="res://textures/Basic_map_1.jpg" id="1_jf1j2"]
+[ext_resource type="Script" uid="uid://bic5mkvyvl436" path="res://Menu/menu.gd" id="1_u03px"]
+[ext_resource type="Texture2D" uid="uid://ccwtlcqf5sh5b" path="res://textures/Mad_square.jpg" id="4_crea4"]
 
-[sub_resource type="GDScript" id="GDScript_jf1j2"]
-script/source = "extends Control
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_esslf"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kp23a"]
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4n7q5"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w4os3"]
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-"
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c8qlv"]
+
+[sub_resource type="Theme" id="Theme_t42ln"]
+VScrollBar/styles/grabber = SubResource("StyleBoxLine_esslf")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_kp23a")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_4n7q5")
+VScrollBar/styles/scroll = SubResource("StyleBoxEmpty_w4os3")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxEmpty_c8qlv")
 
 [node name="Control" type="Control" unique_id=1602911610]
 layout_mode = 3
@@ -24,7 +29,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = SubResource("GDScript_jf1j2")
+script = ExtResource("1_u03px")
 
 [node name="ColorRect" type="TextureRect" parent="." unique_id=251702207]
 layout_mode = 1
@@ -202,6 +207,7 @@ offset_left = 384.0
 offset_top = 120.0
 offset_right = 909.0
 offset_bottom = 530.0
+theme = SubResource("Theme_t42ln")
 draw_focus_border = true
 script = ExtResource("1_e56cd")
 
@@ -210,6 +216,30 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="CheckButton" type="CheckButton" parent="Settings layout/VBoxContainer" unique_id=1978696142]
+[node name="TextureRect" type="TextureRect" parent="Settings layout/VBoxContainer" unique_id=63249766]
 layout_mode = 2
-text = "V-Sync"
+texture = ExtResource("4_crea4")
+
+[node name="TextureRect2" type="TextureRect" parent="Settings layout/VBoxContainer" unique_id=1259305724]
+layout_mode = 2
+texture = ExtResource("4_crea4")
+
+[node name="TextureRect3" type="TextureRect" parent="Settings layout/VBoxContainer" unique_id=784864294]
+layout_mode = 2
+texture = ExtResource("4_crea4")
+
+[node name="TextureRect4" type="TextureRect" parent="Settings layout/VBoxContainer" unique_id=436009832]
+layout_mode = 2
+texture = ExtResource("4_crea4")
+
+[node name="TextureRect5" type="TextureRect" parent="Settings layout/VBoxContainer" unique_id=1273610686]
+layout_mode = 2
+texture = ExtResource("4_crea4")
+
+[node name="TextureRect6" type="TextureRect" parent="Settings layout/VBoxContainer" unique_id=623311319]
+layout_mode = 2
+texture = ExtResource("4_crea4")
+
+[node name="TextureRect7" type="TextureRect" parent="Settings layout/VBoxContainer" unique_id=1560528942]
+layout_mode = 2
+texture = ExtResource("4_crea4")

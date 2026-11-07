@@ -12,7 +12,7 @@ func _ready() -> void:
 	singleplayer_btn = $"Main menu layout/VBoxContainer/Singleplayer"
 	single_menu.visible = false
 	settings_menu = $"Settings layout"
-	settings_btn = $"Main menu layout/VboxContainer/Settings"
+	settings_btn = $"Main menu layout/VBoxContainer/Settings"
 	settings_menu.visible = false
 	exit_btn = $"Main menu layout/VBoxContainer/Exit"
 	
