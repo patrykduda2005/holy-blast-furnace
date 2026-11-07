@@ -1,0 +1,215 @@
+[gd_scene format=3 uid="uid://574ung7kdpsg"]
+
+[ext_resource type="Script" uid="uid://bdqmhm852qcnw" path="res://Menu/settings.gd" id="1_e56cd"]
+[ext_resource type="Texture2D" uid="uid://km6t2guc3h3l" path="res://textures/Basic_map_1.jpg" id="1_jf1j2"]
+
+[sub_resource type="GDScript" id="GDScript_jf1j2"]
+script/source = "extends Control
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="Control" type="Control" unique_id=1602911610]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_jf1j2")
+
+[node name="ColorRect" type="TextureRect" parent="." unique_id=251702207]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -800.0
+offset_top = -448.0
+offset_right = 800.0
+offset_bottom = 448.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_jf1j2")
+
+[node name="Main menu layout" type="CenterContainer" parent="." unique_id=672448618]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 192.0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main menu layout" unique_id=1160771631]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Singleplayer" type="Button" parent="Main menu layout/VBoxContainer" unique_id=1672009867]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+text = "Singleplayer"
+
+[node name="Multiplayer" type="Button" parent="Main menu layout/VBoxContainer" unique_id=1130407961]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+text = "Muliplayer"
+
+[node name="Map Creator" type="Button" parent="Main menu layout/VBoxContainer" unique_id=205573515]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+text = "Map Creator"
+
+[node name="Settings" type="Button" parent="Main menu layout/VBoxContainer" unique_id=1990273734]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+text = "Settings"
+
+[node name="Exit" type="Button" parent="Main menu layout/VBoxContainer" unique_id=136615863]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+text = "Exit"
+
+[node name="Singleplayer layout" type="CenterContainer" parent="." unique_id=1465223162]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 384.0
+offset_top = 120.0
+offset_right = -243.0
+offset_bottom = -110.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="Singleplayer layout" unique_id=524025493]
+layout_mode = 2
+theme_override_constants/h_separation = 50
+theme_override_constants/v_separation = 50
+columns = 5
+
+[node name="lvl_1" type="Button" parent="Singleplayer layout/GridContainer" unique_id=564941102]
+custom_minimum_size = Vector2(65, 65)
+layout_mode = 2
+text = "1"
+
+[node name="lvl_2" type="Button" parent="Singleplayer layout/GridContainer" unique_id=1495004972]
+custom_minimum_size = Vector2(65, 65)
+layout_mode = 2
+text = "2"
+
+[node name="lvl_3" type="Button" parent="Singleplayer layout/GridContainer" unique_id=654914480]
+custom_minimum_size = Vector2(65, 65)
+layout_mode = 2
+text = "3"
+
+[node name="lvl_4" type="Button" parent="Singleplayer layout/GridContainer" unique_id=1201139560]
+custom_minimum_size = Vector2(65, 65)
+layout_mode = 2
+text = "4"
+
+[node name="lvl_5" type="Button" parent="Singleplayer layout/GridContainer" unique_id=859435555]
+custom_minimum_size = Vector2(65, 65)
+layout_mode = 2
+text = "5"
+
+[node name="lvl_6" type="Button" parent="Singleplayer layout/GridContainer" unique_id=675608571]
+custom_minimum_size = Vector2(65, 65)
+layout_mode = 2
+text = "6"
+
+[node name="lvl_7" type="Button" parent="Singleplayer layout/GridContainer" unique_id=169589774]
+custom_minimum_size = Vector2(65, 65)
+layout_mode = 2
+text = "7"
+
+[node name="lvl_8" type="Button" parent="Singleplayer layout/GridContainer" unique_id=1965233776]
+custom_minimum_size = Vector2(65, 65)
+layout_mode = 2
+text = "8"
+
+[node name="lvl_9" type="Button" parent="Singleplayer layout/GridContainer" unique_id=78161536]
+custom_minimum_size = Vector2(65, 65)
+layout_mode = 2
+text = "9"
+
+[node name="lvl_10" type="Button" parent="Singleplayer layout/GridContainer" unique_id=1223790963]
+custom_minimum_size = Vector2(65, 65)
+layout_mode = 2
+text = "10"
+
+[node name="lvl_11" type="Button" parent="Singleplayer layout/GridContainer" unique_id=1417095115]
+custom_minimum_size = Vector2(65, 65)
+layout_mode = 2
+text = "11"
+
+[node name="lvl_12" type="Button" parent="Singleplayer layout/GridContainer" unique_id=1651097174]
+custom_minimum_size = Vector2(65, 65)
+layout_mode = 2
+text = "12"
+
+[node name="lvl_13" type="Button" parent="Singleplayer layout/GridContainer" unique_id=1701519750]
+custom_minimum_size = Vector2(65, 65)
+layout_mode = 2
+text = "13"
+
+[node name="lvl_14" type="Button" parent="Singleplayer layout/GridContainer" unique_id=765246823]
+custom_minimum_size = Vector2(65, 65)
+layout_mode = 2
+text = "14"
+
+[node name="lvl_15" type="Button" parent="Singleplayer layout/GridContainer" unique_id=1042040640]
+custom_minimum_size = Vector2(65, 65)
+layout_mode = 2
+text = "15"
+
+[node name="lvl_16" type="Button" parent="Singleplayer layout/GridContainer" unique_id=2004558303]
+custom_minimum_size = Vector2(65, 65)
+layout_mode = 2
+text = "16"
+
+[node name="lvl_17" type="Button" parent="Singleplayer layout/GridContainer" unique_id=1507000631]
+custom_minimum_size = Vector2(65, 65)
+layout_mode = 2
+text = "17"
+
+[node name="lvl_18" type="Button" parent="Singleplayer layout/GridContainer" unique_id=646774546]
+custom_minimum_size = Vector2(65, 65)
+layout_mode = 2
+text = "18"
+
+[node name="lvl_19" type="Button" parent="Singleplayer layout/GridContainer" unique_id=626272796]
+custom_minimum_size = Vector2(65, 65)
+layout_mode = 2
+text = "19"
+
+[node name="lvl_20" type="Button" parent="Singleplayer layout/GridContainer" unique_id=78905736]
+custom_minimum_size = Vector2(65, 65)
+layout_mode = 2
+text = "20"
+
+[node name="Settings layout" type="ScrollContainer" parent="." unique_id=1854653221]
+visible = false
+layout_mode = 0
+offset_left = 384.0
+offset_top = 120.0
+offset_right = 909.0
+offset_bottom = 530.0
+draw_focus_border = true
+script = ExtResource("1_e56cd")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Settings layout" unique_id=837933903]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="CheckButton" type="CheckButton" parent="Settings layout/VBoxContainer" unique_id=1978696142]
+layout_mode = 2
+text = "V-Sync"
