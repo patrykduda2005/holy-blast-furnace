@@ -1,11 +1,21 @@
 extends Node2D
 
 const sight_range: float = 300.0
-var type: TowerFactory.towerType = TowerFactory.towerType.grabber
+var type: TowerFactory.towerType = TowerFactory.towerType.fister
 
 func _ready() -> void:
 	Globals.bullet_timer.connect(_shoot)
+	changeType(TowerFactory.towerType.walec) # temp
 	
+	
+func changeType(type: TowerFactory.towerType):
+	match type:
+		TowerFactory.towerType.grabber:
+			get_node("Sprite2D").texture = load("res://textures/grabber.png")
+		TowerFactory.towerType.walec:
+			get_node("Sprite2D").texture = load("res://textures/walec.png")
+	self.type = type
+			
 func _physics_process(_delta: float) -> void:
 	turn()
 	
