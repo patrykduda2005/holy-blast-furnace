@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://bdqmhm852qcnw" path="res://Menu/settings.gd" id="1_e56cd"]
 [ext_resource type="Texture2D" uid="uid://km6t2guc3h3l" path="res://textures/Basic_map_1.jpg" id="1_jf1j2"]
 [ext_resource type="Script" uid="uid://bic5mkvyvl436" path="res://Menu/menu.gd" id="1_u03px"]
-[ext_resource type="Texture2D" uid="uid://ccwtlcqf5sh5b" path="res://textures/Mad_square.jpg" id="4_crea4"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_esslf"]
 
@@ -201,7 +200,6 @@ layout_mode = 2
 text = "20"
 
 [node name="Settings layout" type="ScrollContainer" parent="." unique_id=1854653221]
-visible = false
 layout_mode = 0
 offset_left = 384.0
 offset_top = 120.0
@@ -216,30 +214,33 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="TextureRect" type="TextureRect" parent="Settings layout/VBoxContainer" unique_id=63249766]
+[node name="Window" type="MenuButton" parent="Settings layout/VBoxContainer" unique_id=1518342069]
 layout_mode = 2
-texture = ExtResource("4_crea4")
+text = "Screen
+"
+alignment = 0
+item_count = 3
+popup/item_0/text = "Fullscreen"
+popup/item_0/id = 0
+popup/item_1/text = "Windowed"
+popup/item_1/id = 1
+popup/item_2/text = "Borderless Windowed"
+popup/item_2/id = 2
 
-[node name="TextureRect2" type="TextureRect" parent="Settings layout/VBoxContainer" unique_id=1259305724]
+[node name="Resolution" type="MenuButton" parent="Settings layout/VBoxContainer" unique_id=2002807437]
 layout_mode = 2
-texture = ExtResource("4_crea4")
+text = "Resolution"
+alignment = 0
+item_count = 2
+popup/item_0/text = "1920x1080p"
+popup/item_0/id = 0
+popup/item_1/text = "800x600p"
+popup/item_1/id = 1
 
-[node name="TextureRect3" type="TextureRect" parent="Settings layout/VBoxContainer" unique_id=784864294]
-layout_mode = 2
-texture = ExtResource("4_crea4")
-
-[node name="TextureRect4" type="TextureRect" parent="Settings layout/VBoxContainer" unique_id=436009832]
-layout_mode = 2
-texture = ExtResource("4_crea4")
-
-[node name="TextureRect5" type="TextureRect" parent="Settings layout/VBoxContainer" unique_id=1273610686]
-layout_mode = 2
-texture = ExtResource("4_crea4")
-
-[node name="TextureRect6" type="TextureRect" parent="Settings layout/VBoxContainer" unique_id=623311319]
-layout_mode = 2
-texture = ExtResource("4_crea4")
-
-[node name="TextureRect7" type="TextureRect" parent="Settings layout/VBoxContainer" unique_id=1560528942]
-layout_mode = 2
-texture = ExtResource("4_crea4")
+[node name="SaveSettingsButton" type="Button" parent="." unique_id=925464891]
+layout_mode = 0
+offset_left = 408.0
+offset_top = 560.0
+offset_right = 468.0
+offset_bottom = 595.0
+text = "Save"

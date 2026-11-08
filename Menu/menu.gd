@@ -5,6 +5,8 @@ var singleplayer_btn: Button
 var settings_menu: Control
 var settings_btn: Button
 var exit_btn: Button
+var save_btn: Button
+#var database: SQLite
 
 func _ready() -> void:
 	#zmienne
@@ -15,8 +17,13 @@ func _ready() -> void:
 	settings_btn = $"Main menu layout/VBoxContainer/Settings"
 	settings_menu.visible = false
 	exit_btn = $"Main menu layout/VBoxContainer/Exit"
+	save_btn = $"SaveSettingsButton"
+	save_btn.visible = false
 	
-	
+	#database = SQLite.new()
+	#database.path = "res://Database/data.db"
+	#database.open_db()
+	#
 	#akcja	
 	singleplayer_btn.pressed.connect(_on_singleplayer_pressed)
 	settings_btn.pressed.connect(_on_settings_button_pressed)
@@ -35,20 +42,19 @@ func _on_level_button_pressed(level_name: String) -> void:
 	var scene_path: String = "res://lvl_singleplayer/%s/%s.tscn" % [level_name, level_name]
 	if ResourceLoader.exists(scene_path):
 		get_tree().change_scene_to_file(scene_path)
+		Globals.menu_on = false
 	else:
 		print("Scena jeszcze nie istnieje: ", scene_path)
 
 #Ustawienia
 func _on_settings_button_pressed() -> void:
 	settings_menu.visible = !settings_menu.visible
+	save_btn.visible = !save_btn.visible
 	print("Settings button pressed\n")
-	
 
 #Wyjście z gry
 func _on_exit_pressed() -> void:
 	print("Exit button pressed\n")
 	get_tree().quit()
 
-
-func _process(delta: float) -> void:
-	pass
+#SQLite

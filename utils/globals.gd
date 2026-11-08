@@ -1,9 +1,9 @@
 extends Node
 
-
 signal bullet_timer
 
 var timer: Timer
+var menu_on: bool = true
 var minimal_enemy_speed: int = -20
 
 func _ready() -> void:
