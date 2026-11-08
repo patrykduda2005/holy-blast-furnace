@@ -3,6 +3,12 @@ extends Node
 var touretNode: PackedScene = preload("res://Towers/touret.tscn")
 var towersNode: Node2D
 
+enum towerType {
+	grabber,
+	walec,
+	fister,
+}
+
 func _ready() -> void:
 	print("[INFO] TowerFactory loaded")
 

@@ -3,20 +3,20 @@ extends Node2D
 var basicEnemy: PackedScene = preload("res://Enemies/basic_enemy.tscn")
 var enemies: Array[Variant]
 
-var enemyPath: Path2D
+var enemyPath: Path2D # EnemyPath przy zaladowaniu poziomu musi sie tutaj wczytac
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	print("[INFO] EnemyFactory loaded")
-	pass # Replace with function body.
+
 
 func spawnBasicEnemy() -> void:
 	if !enemyPath: #no path? just return
 		return
 	var enemyInstance: Variant = basicEnemy.instantiate()
+	#							dur, har, plast
+	enemyInstance.setProperties(15, 100, 20)
 	enemies.push_back(enemyInstance)
 	enemyPath.add_child.call_deferred(enemyInstance)
-	pass
 	
 func getFistEnemyInRange(origin: Vector2, range: float) -> Variant:
 	for enemy in enemies:
@@ -36,7 +36,6 @@ func _input(event) -> void:
 		spawnBasicEnemy()
 	if Input.is_action_just_pressed("towered"):
 		TowerFactory.spawnTower(get_global_mouse_position())
-	pass
 
 func reset() -> void:
 	for enemy in enemies:
@@ -44,4 +43,3 @@ func reset() -> void:
 			enemy.free()
 	enemies.clear()
 	enemyPath = null
-	pass
