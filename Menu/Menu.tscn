@@ -214,7 +214,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="MenuButton2" type="MenuButton" parent="Settings layout/VBoxContainer" unique_id=1518342069]
+[node name="Window" type="MenuButton" parent="Settings layout/VBoxContainer" unique_id=1518342069]
 layout_mode = 2
 text = "Screen
 "
@@ -227,7 +227,7 @@ popup/item_1/id = 1
 popup/item_2/text = "Borderless Windowed"
 popup/item_2/id = 2
 
-[node name="MenuButton" type="MenuButton" parent="Settings layout/VBoxContainer" unique_id=2002807437]
+[node name="Resolution" type="MenuButton" parent="Settings layout/VBoxContainer" unique_id=2002807437]
 layout_mode = 2
 text = "Resolution"
 alignment = 0
@@ -236,3 +236,11 @@ popup/item_0/text = "1920x1080p"
 popup/item_0/id = 0
 popup/item_1/text = "800x600p"
 popup/item_1/id = 1
+
+[node name="SaveSettingsButton" type="Button" parent="." unique_id=925464891]
+layout_mode = 0
+offset_left = 408.0
+offset_top = 560.0
+offset_right = 468.0
+offset_bottom = 595.0
+text = "Save"
