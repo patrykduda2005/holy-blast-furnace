@@ -1,7 +1,7 @@
 extends Node2D
 
 const sight_range: float = 300.0
-var type: TowerFactory.towerType = TowerFactory.towerType.walec
+var type: TowerFactory.towerType = TowerFactory.towerType.grabber
 
 func _ready() -> void:
 	Globals.bullet_timer.connect(_shoot)

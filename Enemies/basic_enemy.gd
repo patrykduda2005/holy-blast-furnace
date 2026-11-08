@@ -7,6 +7,8 @@ var durability: float = -1
 var hardness: float = -1
 var plasticity: float = -1
 
+var isStunned: bool = false
+
 var hp = 100
 
 func _ready() -> void:
@@ -36,6 +38,12 @@ func damage(damage: int, tower_type: TowerFactory.towerType):
 	match tower_type:
 		TowerFactory.towerType.grabber:
 			self.hp -= 10/(10 + self.durability) * damage
+			var temp_speed = self.run_speed
+			self.run_speed = 0
+			self.isStunned = true
+			await get_tree().create_timer(clamp(5/(5 + self.durability) * 1, 0.01, 0.99)).timeout
+			self.run_speed = temp_speed
+			self.isStunned = false
 		TowerFactory.towerType.walec:
 			self.hp -= 10/(10 + self.plasticity) * damage
 			self.run_speed -= 5/(5 + self.plasticity) * 20

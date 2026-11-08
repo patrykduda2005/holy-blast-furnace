@@ -14,7 +14,7 @@ func spawnBasicEnemy() -> void:
 		return
 	var enemyInstance: Variant = basicEnemy.instantiate()
 	#							dur, har, plast
-	enemyInstance.setProperties(100, 100, 20)
+	enemyInstance.setProperties(15, 100, 20)
 	enemies.push_back(enemyInstance)
 	enemyPath.add_child.call_deferred(enemyInstance)
 	
