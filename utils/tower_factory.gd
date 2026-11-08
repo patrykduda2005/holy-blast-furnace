@@ -8,8 +8,10 @@ func _ready() -> void:
 
 
 func spawnTower(spawnPoint: Vector2) -> void:
+	if Globals.menu_on:
+		return
 	var touretInstance: Variant = touretNode.instantiate()
-#	towersNode.add_child.call_deferred(touretInstance)
+	towersNode.add_child.call_deferred(touretInstance)
 	touretInstance.set_position(spawnPoint)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -1,9 +1,9 @@
 extends Node
 
-
 signal bullet_timer
 
 var timer: Timer
+var menu_on: bool = true
 
 func _ready() -> void:
 	timer = Timer.new()

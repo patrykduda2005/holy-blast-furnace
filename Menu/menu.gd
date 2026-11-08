@@ -35,6 +35,7 @@ func _on_level_button_pressed(level_name: String) -> void:
 	var scene_path: String = "res://lvl_singleplayer/%s/%s.tscn" % [level_name, level_name]
 	if ResourceLoader.exists(scene_path):
 		get_tree().change_scene_to_file(scene_path)
+		Globals.menu_on = false
 	else:
 		print("Scena jeszcze nie istnieje: ", scene_path)
 
