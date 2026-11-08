@@ -15,6 +15,7 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
+	
 	progress += run_speed * delta
 	if hp <= 0:
 		die()
@@ -37,6 +38,11 @@ func damage(damage: int, tower_type: TowerFactory.towerType):
 			self.hp -= 10/(10 + self.durability) * damage
 		TowerFactory.towerType.walec:
 			self.hp -= 10/(10 + self.plasticity) * damage
+			self.run_speed -= 5/(5 + self.plasticity) * 20
+			if self.run_speed <= Globals.minimal_enemy_speed:
+				self.run_speed = Globals.minimal_enemy_speed
+			if self.run_speed == 0: # no, stopping pls
+				self.run_speed = -5
 		TowerFactory.towerType.fister:
 			self.hp -= 10/(10 + self.hardness) * damage
 		_:

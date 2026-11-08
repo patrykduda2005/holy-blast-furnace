@@ -4,6 +4,7 @@ extends Node
 signal bullet_timer
 
 var timer: Timer
+var minimal_enemy_speed: int = -20
 
 func _ready() -> void:
 	timer = Timer.new()

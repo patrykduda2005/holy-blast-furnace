@@ -13,7 +13,8 @@ func spawnBasicEnemy() -> void:
 	if !enemyPath: #no path? just return
 		return
 	var enemyInstance: Variant = basicEnemy.instantiate()
-	enemyInstance.setProperties(100, 100, 100)
+	#							dur, har, plast
+	enemyInstance.setProperties(100, 100, 20)
 	enemies.push_back(enemyInstance)
 	enemyPath.add_child.call_deferred(enemyInstance)
 	
