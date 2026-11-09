@@ -49,8 +49,9 @@ func damage(damage: int, tower_type: TowerFactory.towerType):
 			self.run_speed -= 5/(5 + self.plasticity) * 20
 			if self.run_speed <= Globals.minimal_enemy_speed:
 				self.run_speed = Globals.minimal_enemy_speed
-			if self.run_speed == 0: # no, stopping pls
-				self.run_speed = -5
+			# Zamiast -5, ustawiamy minimalnie 0 (stoisz w miejscu, a nie jedziesz w tył)
+			if self.run_speed < 0: 
+				self.run_speed = 0.0
 		TowerFactory.towerType.fister:
 			self.hp -= 10/(10 + self.hardness) * damage
 		_:
