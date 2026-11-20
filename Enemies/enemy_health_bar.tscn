@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://bmbidydy33hcx"]
+
+[ext_resource type="Texture2D" uid="uid://b1apmwus3a3of" path="res://textures/under_health_bar.png" id="1_4kwja"]
+[ext_resource type="Script" uid="uid://b6l7hg16dn3qv" path="res://Enemies/texture_progress_bar.gd" id="1_ak00o"]
+[ext_resource type="Texture2D" uid="uid://bbdw2tdaj8avr" path="res://textures/progres.png" id="2_8rr7w"]
+
+[node name="Enemy_health_bar" type="Control" unique_id=1026779488]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=1821354200]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -15.0
+offset_right = 40.0
+grow_horizontal = 2
+grow_vertical = 0
+nine_patch_stretch = true
+texture_under = ExtResource("1_4kwja")
+texture_progress = ExtResource("2_8rr7w")
+script = ExtResource("1_ak00o")

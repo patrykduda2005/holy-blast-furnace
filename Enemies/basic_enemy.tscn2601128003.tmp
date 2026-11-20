@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dc0cwe10vnq4s"]
+
+[ext_resource type="Texture2D" uid="uid://ccwtlcqf5sh5b" path="res://textures/Mad_square.jpg" id="1_221se"]
+[ext_resource type="Script" uid="uid://eokyshg0q405" path="res://Enemies/basic_enemy.gd" id="1_dvx36"]
+[ext_resource type="Texture2D" uid="uid://djd7vm4n6380q" path="res://textures/health_bar_enemies.jpg" id="3_4vdx4"]
+[ext_resource type="Texture2D" uid="uid://bgxa7trphhaax" path="res://textures/over.jpg" id="4_rcyh1"]
+[ext_resource type="Texture2D" uid="uid://w1j24b8k1wo0" path="res://textures/progress_health_bar_enemies.jpg" id="5_qenpu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_khtlt"]
+size = Vector2(64, 64)
+
+[node name="Basic_enemy" type="PathFollow2D" unique_id=1559184484]
+script = ExtResource("1_dvx36")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=418926063]
+
+[node name="Tower" type="Sprite2D" parent="CharacterBody2D" unique_id=2038516357]
+position = Vector2(-2.6528796e-06, 3.5762787e-07)
+scale = Vector2(0.25396824, 0.25396827)
+texture = ExtResource("1_221se")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=450036187]
+shape = SubResource("RectangleShape2D_khtlt")
+
+[node name="HealthBar" type="TextureProgressBar" parent="CharacterBody2D" unique_id=1853364931]
+offset_left = -37.5
+offset_top = -48.0
+offset_right = 37.5
+offset_bottom = -33.0
+nine_patch_stretch = true
+texture_under = ExtResource("3_4vdx4")
+texture_over = ExtResource("4_rcyh1")
+texture_progress = ExtResource("5_qenpu")

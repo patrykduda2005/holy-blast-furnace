@@ -9,11 +9,23 @@ var plasticity: float = -1
 
 var isStunned: bool = false
 
-var hp = 100
+#var hp = 100
+
+signal healthChanged(current_hp: float, max_hp: float)
+@export var max_hp: float = 100.0
+var hp: float = 100.0:
+	set(new_value):
+		hp = clamp(new_value, 0.0, max_hp)
+		healthChanged.emit(hp, max_hp)
+
+@onready var health_bar: TextureProgressBar = $CharacterBody2D/Enemy_health_bar/TextureProgressBar
+
 
 func _ready() -> void:
 	# Wyłącza zapętlanie ścieżki, aby wróg nie wracał na start po dotarciu do pieca
 	loop = false
+	healthChanged.connect(health_bar.set_health_bar)
+	health_bar.set_health_bar(hp, max_hp)
 
 
 func _process(delta: float) -> void:
@@ -35,6 +47,7 @@ func setProperties(durability, hardness, plasticity):
 	self.plasticity = plasticity
 	
 func damage(damage: int, tower_type: TowerFactory.towerType):
+
 	match tower_type:
 		TowerFactory.towerType.grabber:
 			self.hp -= 10/(10 + self.durability) * damage
@@ -55,6 +68,7 @@ func damage(damage: int, tower_type: TowerFactory.towerType):
 			self.hp -= 10/(10 + self.hardness) * damage
 		_:
 			return
+	pass
 
 #	if progress_ratio >= 1.0:
 #		# Tutaj dodajcie zadanie obrażeń bazie, np. GameManager.damage_base(10)

@@ -37,4 +37,4 @@ text = "Exit to Menu"
 
 [node name="Quit" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1814170443]
 layout_mode = 2
-text = "Quit Nigga"
+text = "Quit the game"

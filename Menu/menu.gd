@@ -20,10 +20,6 @@ func _ready() -> void:
 	save_btn = $"SaveSettingsButton"
 	save_btn.visible = false
 	
-	#database = SQLite.new()
-	#database.path = "res://Database/data.db"
-	#database.open_db()
-	#
 	#akcja	
 	singleplayer_btn.pressed.connect(_on_singleplayer_pressed)
 	settings_btn.pressed.connect(_on_settings_button_pressed)
@@ -34,6 +30,9 @@ func _ready() -> void:
 
 #Singleplayer
 func _on_singleplayer_pressed() -> void:
+	if(settings_menu.visible):
+		settings_menu.visible = !settings_menu.visible
+	
 	single_menu.visible = !single_menu.visible
 	print("Singleplayer button pressed\n")
 
@@ -48,6 +47,9 @@ func _on_level_button_pressed(level_name: String) -> void:
 
 #Ustawienia
 func _on_settings_button_pressed() -> void:
+	if(single_menu.visible):
+		single_menu.visible = !single_menu.visible
+	
 	settings_menu.visible = !settings_menu.visible
 	save_btn.visible = !save_btn.visible
 	print("Settings button pressed\n")

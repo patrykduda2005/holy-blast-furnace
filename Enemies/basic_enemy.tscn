@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://ccwtlcqf5sh5b" path="res://textures/Mad_square.jpg" id="1_221se"]
 [ext_resource type="Script" uid="uid://eokyshg0q405" path="res://Enemies/basic_enemy.gd" id="1_dvx36"]
+[ext_resource type="PackedScene" uid="uid://bmbidydy33hcx" path="res://Enemies/enemy_health_bar.tscn" id="3_gie15"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_khtlt"]
 size = Vector2(64, 64)
@@ -18,3 +19,8 @@ texture = ExtResource("1_221se")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=450036187]
 shape = SubResource("RectangleShape2D_khtlt")
+
+[node name="Enemy_health_bar" parent="CharacterBody2D" unique_id=1026779488 instance=ExtResource("3_gie15")]
+offset_top = -40.0
+offset_bottom = -40.0
+metadata/_edit_use_anchors_ = true
