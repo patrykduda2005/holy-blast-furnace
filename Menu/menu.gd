@@ -32,6 +32,7 @@ func _ready() -> void:
 func _on_singleplayer_pressed() -> void:
 	if(settings_menu.visible):
 		settings_menu.visible = !settings_menu.visible
+		save_btn.visible = !save_btn.visible
 	
 	single_menu.visible = !single_menu.visible
 	print("Singleplayer button pressed\n")
@@ -49,6 +50,7 @@ func _on_level_button_pressed(level_name: String) -> void:
 func _on_settings_button_pressed() -> void:
 	if(single_menu.visible):
 		single_menu.visible = !single_menu.visible
+		
 	
 	settings_menu.visible = !settings_menu.visible
 	save_btn.visible = !save_btn.visible
