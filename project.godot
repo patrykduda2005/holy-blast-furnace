@@ -25,7 +25,8 @@ SqLiteManager="*uid://jkmpsp6k87bd"
 
 [display]
 
-window/size/viewport_height=640
+window/size/viewport_width=1280
+window/size/viewport_height=720
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 

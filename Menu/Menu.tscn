@@ -200,6 +200,7 @@ layout_mode = 2
 text = "20"
 
 [node name="Settings layout" type="ScrollContainer" parent="." unique_id=1854653221]
+visible = false
 layout_mode = 0
 offset_left = 384.0
 offset_top = 120.0
@@ -238,6 +239,7 @@ popup/item_1/text = "800x600p"
 popup/item_1/id = 1
 
 [node name="SaveSettingsButton" type="Button" parent="." unique_id=925464891]
+visible = false
 layout_mode = 0
 offset_left = 408.0
 offset_top = 560.0
