@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://hk8pvcnvu507" path="res://Baza/base.gd" id="1_2x6ro"]
 [ext_resource type="Texture2D" uid="uid://ddb5ty603ebvu" path="res://textures/baza.png" id="1_k7vqc"]
 [ext_resource type="PackedScene" uid="uid://drdioisghecyf" path="res://Baza/base_health_bar.tscn" id="2_hn488"]
+[ext_resource type="Script" uid="uid://fgcrw6ajuq8" path="res://Baza/collision_shape_2d.gd" id="4_27lgn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xrxaf"]
 size = Vector2(64, 128)
@@ -10,6 +11,8 @@ size = Vector2(64, 128)
 [node name="Node2D" type="Node2D" unique_id=1877140190]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=142082259]
+collision_layer = 4
+collision_mask = 8
 script = ExtResource("1_2x6ro")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=547210662]
@@ -29,3 +32,4 @@ size_flags_vertical = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2084518014]
 visible = false
 shape = SubResource("RectangleShape2D_xrxaf")
+script = ExtResource("4_27lgn")

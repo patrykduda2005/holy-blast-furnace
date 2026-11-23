@@ -1,6 +1,7 @@
 extends PathFollow2D
 
 @export var run_speed: int = 50
+var kolizja
 
 # Wlasciwosci przeciwnika, od tych zmiennych zalezy dzialanie wiezyczek
 var durability: float = -1
@@ -22,6 +23,7 @@ var hp: float = 100.0:
 
 
 func _ready() -> void:
+	kolizja = $"./Area2D"
 	# Wyłącza zapętlanie ścieżki, aby wróg nie wracał na start po dotarciu do pieca
 	loop = false
 	healthChanged.connect(health_bar.set_health_bar)
@@ -29,7 +31,10 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	
+	if (kolizja.has_overlapping_bodies()):
+		for marcel in kolizja.get_overlapping_bodies():
+			marcel.hp -= 100;
+		hp = 0;
 	progress += run_speed * delta
 	if hp <= 0:
 		die()
