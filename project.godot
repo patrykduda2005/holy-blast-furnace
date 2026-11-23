@@ -38,6 +38,10 @@ enabled=PackedStringArray("res://addons/gdstyle/plugin.cfg", "res://addons/godot
 
 Base=""
 
+[gui]
+
+theme/custom="uid://bvxvk60buviuo"
+
 [input]
 
 spawn_enemy={
