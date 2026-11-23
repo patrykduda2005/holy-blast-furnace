@@ -13,7 +13,7 @@ script = ExtResource("1_51l0s")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=2101534830]
 layout_mode = 0
-offset_right = 100.0
+offset_right = 128.0
 offset_bottom = 300.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1917019227]
@@ -37,4 +37,4 @@ text = "Exit to Menu"
 
 [node name="Quit" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1814170443]
 layout_mode = 2
-text = "Quit the game"
+text = "Quit game"
