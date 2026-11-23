@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dytes7dfqjfhg" path="res://Towers/touret.tscn" id="3_5ohj2"]
 [ext_resource type="Script" uid="uid://b4k8e20lqdqey" path="res://lvl_singleplayer/lvl_1/towers.gd" id="4_n4or2"]
 [ext_resource type="PackedScene" uid="uid://cry5xiud2p3y3" path="res://Menu/escape_menu.tscn" id="6_n4or2"]
+[ext_resource type="Script" uid="uid://cdssg0hpvydh2" path="res://lvl_singleplayer/lvl_1/WaveManager.gd" id="7_jjx2u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kp331"]
 texture = ExtResource("1_5t8a8")
@@ -96,3 +97,6 @@ offset_top = -120.0
 offset_right = -120.0
 offset_bottom = -120.0
 scale = Vector2(1.6399989, 1.5199987)
+
+[node name="WaveManager" type="Node" parent="." unique_id=1024893885]
+script = ExtResource("7_jjx2u")
