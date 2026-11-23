@@ -18,7 +18,7 @@ var hp: float = 100.0:
 		hp = clamp(new_value, 0.0, max_hp)
 		healthChanged.emit(hp, max_hp)
 
-@onready var health_bar: TextureProgressBar = $CharacterBody2D/Enemy_health_bar/TextureProgressBar
+@onready var health_bar: TextureProgressBar = $Area2D/Enemy_health_bar/TextureProgressBar
 
 
 func _ready() -> void:
@@ -71,6 +71,14 @@ func damage(damage: int, tower_type: TowerFactory.towerType):
 			return
 	pass
 
+
+
+
 #	if progress_ratio >= 1.0:
 #		# Tutaj dodajcie zadanie obrażeń bazie, np. GameManager.damage_base(10)
 #		queue_free()
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Base"):
+		die()

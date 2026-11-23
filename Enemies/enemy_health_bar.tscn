@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bmbidydy33hcx"]
 
 [ext_resource type="Texture2D" uid="uid://b1apmwus3a3of" path="res://textures/under_health_bar.png" id="1_4kwja"]
-[ext_resource type="Script" uid="uid://b6l7hg16dn3qv" path="res://Enemies/texture_progress_bar.gd" id="1_ak00o"]
+[ext_resource type="Script" uid="uid://b6l7hg16dn3qv" path="res://Enemies/enemies_health_bar.gd" id="1_ak00o"]
 [ext_resource type="Texture2D" uid="uid://bbdw2tdaj8avr" path="res://textures/progres.png" id="2_8rr7w"]
 
 [node name="Enemy_health_bar" type="Control" unique_id=1026779488]

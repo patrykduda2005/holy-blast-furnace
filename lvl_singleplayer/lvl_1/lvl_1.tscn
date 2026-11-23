@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dytes7dfqjfhg" path="res://Towers/touret.tscn" id="3_5ohj2"]
 [ext_resource type="Script" uid="uid://b4k8e20lqdqey" path="res://lvl_singleplayer/lvl_1/towers.gd" id="4_n4or2"]
 [ext_resource type="PackedScene" uid="uid://cry5xiud2p3y3" path="res://Menu/escape_menu.tscn" id="6_n4or2"]
+[ext_resource type="PackedScene" uid="uid://dekh7gt6ddavp" path="res://Baza/baza-wielki_piec.tscn" id="7_jjx2u"]
 [ext_resource type="Script" uid="uid://cdssg0hpvydh2" path="res://lvl_singleplayer/lvl_1/WaveManager.gd" id="7_jjx2u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kp331"]
@@ -61,9 +62,9 @@ sources/0 = SubResource("TileSetAtlasSource_kp331")
 
 [sub_resource type="Curve2D" id="Curve2D_5t8a8"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -13.404236, 345.6938, 0, 34.05503, 0, -34.05503, -13.404236, 33.693787, 0, 0, 0, 0, 18.595764, 1.6937866, -39.65312, 2.3325365, 39.65312, -2.3325365, 722.59576, 1.6937866, -8.397131, 21.925842, 8.397131, -21.925842, 754.59576, -30.306213, -34.521538, -2.7990437, 34.521538, 2.7990437, 786.59576, -62.306213, 0, 0, 0, 0, 818.59576, -94.30621, 0, 0, 0, 0, 818.59576, -166.30621)
+"points": PackedVector2Array(0, 0, 0, 0, -13.404236, 345.6938, 0, 34.05503, 0, -34.05503, -13.404236, 33.693787, 0, 0, 0, 0, 18.595764, 1.6937866, -39.65312, 2.3325365, 39.65312, -2.3325365, 722.59576, 1.6937866, -8.397131, 21.925842, 8.397131, -21.925842, 754.59576, -30.306213, -34.521538, -2.7990437, 34.521538, 2.7990437, 786.59576, -62.306213, 0, 0, 0, 0, 818.59576, -94.30621, 0, 0, 0, 0, 818.59576, -166.30621, 0, 0, 0, 0, 818.59576, -190.30621)
 }
-point_count = 8
+point_count = 9
 
 [node name="lvl_1" type="Node2D" unique_id=1530932920]
 script = ExtResource("1_t42ln")
@@ -98,5 +99,7 @@ offset_right = -120.0
 offset_bottom = -120.0
 scale = Vector2(1.6399989, 1.5199987)
 
+[node name="Base" parent="." unique_id=1877140190 groups=["Base"] instance=ExtResource("7_jjx2u")]
+position = Vector2(992, 128)
 [node name="WaveManager" type="Node" parent="." unique_id=1024893885]
 script = ExtResource("7_jjx2u")

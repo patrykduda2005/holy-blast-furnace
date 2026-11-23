@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://drdioisghecyf"]
+
+[ext_resource type="Texture2D" uid="uid://b1apmwus3a3of" path="res://textures/under_health_bar.png" id="1_sm1o7"]
+[ext_resource type="Texture2D" uid="uid://bbdw2tdaj8avr" path="res://textures/progres.png" id="2_8obt8"]
+[ext_resource type="Script" uid="uid://lhwxoy4qtkii" path="res://Baza/base_health_bar.gd" id="3_sm1o7"]
+
+[node name="Control" type="Control" unique_id=1152430616]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="tower_health_bar" type="TextureProgressBar" parent="." unique_id=370453724]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -40.0
+offset_right = 40.0
+offset_bottom = 15.0
+grow_horizontal = 2
+nine_patch_stretch = true
+texture_under = ExtResource("1_sm1o7")
+texture_progress = ExtResource("2_8obt8")
+script = ExtResource("3_sm1o7")

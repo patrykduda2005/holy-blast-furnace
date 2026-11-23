@@ -11,9 +11,9 @@ func _ready() -> void:
 func changeType(type: TowerFactory.towerType):
 	match type:
 		TowerFactory.towerType.grabber:
-			get_node("Sprite2D").texture = load("res://textures/grabber.png")
+			get_node("CharacterBody2D/Sprite2D").texture = load("res://textures/grabber.png")
 		TowerFactory.towerType.walec:
-			get_node("Sprite2D").texture = load("res://textures/walec.png")
+			get_node("CharacterBody2D/Sprite2D").texture = load("res://textures/walec.png")
 	self.type = type
 			
 func _physics_process(_delta: float) -> void:

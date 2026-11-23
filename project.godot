@@ -32,7 +32,15 @@ window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/gdstyle/plugin.cfg")
+enabled=PackedStringArray("res://addons/gdstyle/plugin.cfg", "res://addons/godot-sqlite/plugin.cfg")
+
+[global_group]
+
+Base=""
+
+[gui]
+
+theme/custom="uid://bvxvk60buviuo"
 
 [input]
 

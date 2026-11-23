@@ -6,8 +6,10 @@
 [node name="Turret" type="Node2D" unique_id=1270449557]
 script = ExtResource("1_yw3bp")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1140944711]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1818285018]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1140944711]
 texture = ExtResource("1_qrb8a")
 
-[node name="Lufa" type="Marker2D" parent="Sprite2D" unique_id=1227459375]
+[node name="Lufa" type="Marker2D" parent="CharacterBody2D/Sprite2D" unique_id=1227459375]
 position = Vector2(33, 0)
