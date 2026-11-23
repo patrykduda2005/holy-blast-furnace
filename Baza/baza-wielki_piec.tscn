@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://dekh7gt6ddavp"]
+
+[ext_resource type="Script" uid="uid://hk8pvcnvu507" path="res://Baza/base.gd" id="1_2x6ro"]
+[ext_resource type="Texture2D" uid="uid://ddb5ty603ebvu" path="res://textures/baza.png" id="1_k7vqc"]
+[ext_resource type="PackedScene" uid="uid://drdioisghecyf" path="res://Baza/base_health_bar.tscn" id="2_hn488"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrxaf"]
+size = Vector2(64, 128)
+
+[node name="Node2D" type="Node2D" unique_id=1877140190]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=142082259]
+script = ExtResource("1_2x6ro")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=547210662]
+position = Vector2(0, -5.722046e-06)
+scale = Vector2(0.044444446, 0.043956045)
+texture = ExtResource("1_k7vqc")
+
+[node name="HealthBar" parent="StaticBody2D" unique_id=1152430616 instance=ExtResource("2_hn488")]
+anchors_preset = 9
+anchor_right = 0.0
+offset_top = -72.0
+offset_bottom = -72.0
+grow_horizontal = 1
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2084518014]
+visible = false
+shape = SubResource("RectangleShape2D_xrxaf")

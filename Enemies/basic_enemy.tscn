@@ -10,17 +10,17 @@ size = Vector2(64, 64)
 [node name="Basic_enemy" type="PathFollow2D" unique_id=1559184484]
 script = ExtResource("1_dvx36")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=418926063]
+[node name="Area2D" type="Area2D" parent="." unique_id=1011952337]
 
-[node name="Tower" type="Sprite2D" parent="CharacterBody2D" unique_id=2038516357]
+[node name="Tower" type="Sprite2D" parent="Area2D" unique_id=2038516357]
 position = Vector2(-2.6528796e-06, 3.5762787e-07)
 scale = Vector2(0.25396824, 0.25396827)
 texture = ExtResource("1_221se")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=450036187]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=450036187]
 shape = SubResource("RectangleShape2D_khtlt")
 
-[node name="Enemy_health_bar" parent="CharacterBody2D" unique_id=1026779488 instance=ExtResource("3_gie15")]
+[node name="Enemy_health_bar" parent="Area2D" unique_id=1026779488 instance=ExtResource("3_gie15")]
 offset_top = -40.0
 offset_bottom = -40.0
 metadata/_edit_use_anchors_ = true
