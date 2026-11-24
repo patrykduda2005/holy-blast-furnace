@@ -31,10 +31,17 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	if (kolizja.has_overlapping_bodies()):
-		for marcel in kolizja.get_overlapping_bodies():
-			marcel.hp -= 100;
-		hp = 0;
+	if kolizja.has_overlapping_bodies():
+		for body in kolizja.get_overlapping_bodies():
+			if body.has_method("take_damage"):
+				body.take_damage(100)
+				hp = 0
+				break
+			elif "hp" in body:
+				body.hp -= 100
+				hp = 0
+				break
+
 	progress += run_speed * delta
 	if hp <= 0:
 		die()
