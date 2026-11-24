@@ -104,3 +104,13 @@ position = Vector2(992, 128)
 
 [node name="WaveManager" type="Node" parent="." unique_id=1024893885]
 script = ExtResource("8_qr5tv")
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=2121432421]
+
+[node name="HpLabel" type="Label" parent="HUD" unique_id=350881742]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 60.0
+offset_bottom = 60.0
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 28
