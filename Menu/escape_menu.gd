@@ -22,6 +22,7 @@ func _on_resume_pressed() -> void:
 
 func _on_exit_to_menu_pressed() -> void:
 	Globals.menu_on = true
+	EnemyFactory.reset()
 	get_tree().change_scene_to_file("res://Menu/Menu.tscn")
 
 func _on_quit_pressed() -> void:
